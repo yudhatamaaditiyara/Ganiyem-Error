@@ -15,14 +15,14 @@
  */
 'use strict';
 
-const Error = require('./Error');
+const Error = require('./error');
 
 /**
  */
-class RuntimeError extends Error
+class UnknownError extends Error
 {}
 
 /**
  * @+
  */
-module.exports = RuntimeError;
+module.exports = UnknownError;
