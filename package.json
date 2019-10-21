@@ -2,12 +2,12 @@
   "name": "ganiyem-error",
   "description": "The Ganiyem Error",
   "license": "Apache-2.0",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/yudhatamaaditiyara/Ganiyem-Error.git"
   },
   "dependencies": {
-    "ganiyem-util-throwable": "1.0.1"
+    "ganiyem-util-throwable": "1.0.2"
   }
 }
