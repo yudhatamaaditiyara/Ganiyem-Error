@@ -14,26 +14,20 @@
  * limitations under the License.
  */
 const assert = require("assert");
-const Throwable = require("ganiyem-util-throwable");
 const {Error, RuntimeError, IllegalParameterError} = require("../../");
 
 describe("IllegalParameterError", () => {
-	/**
-	 */
+
 	it("instanceof Error", () => {
 		let instance = new IllegalParameterError();
 		assert.ok(instance instanceof Error);
 	});
 
-	/**
-	 */
 	it("instanceof RuntimeError", () => {
 		let instance = new IllegalParameterError();
 		assert.ok(instance instanceof RuntimeError);
 	});
 	
-	/**
-	 */
 	it("default name === 'IllegalParameterError'", () => {
 		let instance = new IllegalParameterError();
 		assert.ok(instance.name === "IllegalParameterError");

@@ -14,19 +14,15 @@
  * limitations under the License.
  */
 const assert = require("assert");
-const Throwable = require("ganiyem-util-throwable");
 const {Error, RuntimeError} = require("../../");
 
 describe("RuntimeError", () => {
-	/**
-	 */
+
 	it("instanceof Error", () => {
 		let instance = new RuntimeError();
 		assert.ok(instance instanceof Error);
 	});
 	
-	/**
-	 */
 	it("default name === 'RuntimeError'", () => {
 		let instance = new RuntimeError();
 		assert.ok(instance.name === "RuntimeError");

@@ -14,19 +14,15 @@
  * limitations under the License.
  */
 const assert = require("assert");
-const Throwable = require("ganiyem-util-throwable");
 const {Error, UnknownError} = require("../../");
 
 describe("UnknownError", () => {
-	/**
-	 */
+
 	it("instanceof Error", () => {
 		let instance = new UnknownError();
 		assert.ok(instance instanceof Error);
 	});
 	
-	/**
-	 */
 	it("default name === 'UnknownError'", () => {
 		let instance = new UnknownError();
 		assert.ok(instance.name === "UnknownError");

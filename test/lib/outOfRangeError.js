@@ -14,26 +14,20 @@
  * limitations under the License.
  */
 const assert = require("assert");
-const Throwable = require("ganiyem-util-throwable");
 const {Error, RuntimeError, OutOfRangeError} = require("../../");
 
 describe("OutOfRangeError", () => {
-	/**
-	 */
+
 	it("instanceof Error", () => {
 		let instance = new OutOfRangeError();
 		assert.ok(instance instanceof Error);
 	});
 
-	/**
-	 */
 	it("instanceof RuntimeError", () => {
 		let instance = new OutOfRangeError();
 		assert.ok(instance instanceof RuntimeError);
 	});
 	
-	/**
-	 */
 	it("default name === 'OutOfRangeError'", () => {
 		let instance = new OutOfRangeError();
 		assert.ok(instance.name === "OutOfRangeError");

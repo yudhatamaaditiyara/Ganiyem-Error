@@ -18,15 +18,12 @@ const Throwable = require("ganiyem-util-throwable");
 const {Error} = require("../../");
 
 describe("Error", () => {
-	/**
-	 */
+
 	it("instanceof Throwable", () => {
 		let instance = new Error();
 		assert.ok(instance instanceof Throwable);
 	});
 	
-	/**
-	 */
 	it("default name === 'Error'", () => {
 		let instance = new Error();
 		assert.ok(instance.name === "Error");
