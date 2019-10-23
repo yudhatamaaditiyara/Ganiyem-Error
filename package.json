@@ -8,6 +8,21 @@
     "url": "git+https://github.com/yudhatamaaditiyara/Ganiyem-Error.git"
   },
   "dependencies": {
-    "ganiyem-util-throwable": "1.0.2"
-  }
+    "ganiyem-util-throwable": "1.1.0"
+  },
+  "devDependencies": {
+    "mocha": "6.2.2"
+  },
+  "engines": {
+    "node": ">= 12.0.0"
+  },
+  "scripts": {
+    "test": "mocha --config test/mocha/config.json"
+  },
+  "files": [
+    "LICENSE",
+    "README.md",
+    "index.js",
+    "lib/"
+  ]
 }
