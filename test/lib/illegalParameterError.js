@@ -15,27 +15,27 @@
  */
 const assert = require("assert");
 const Throwable = require("ganiyem-util-throwable");
-const {Error, RuntimeError, IllegalArgumentError} = require("../../../");
+const {Error, RuntimeError, IllegalParameterError} = require("../../");
 
-describe("IllegalArgumentError", () => {
+describe("IllegalParameterError", () => {
 	/**
 	 */
 	it("instanceof Error", () => {
-		let instance = new IllegalArgumentError();
+		let instance = new IllegalParameterError();
 		assert.ok(instance instanceof Error);
 	});
 
 	/**
 	 */
 	it("instanceof RuntimeError", () => {
-		let instance = new IllegalArgumentError();
+		let instance = new IllegalParameterError();
 		assert.ok(instance instanceof RuntimeError);
 	});
 	
 	/**
 	 */
-	it("default name === 'IllegalArgumentError'", () => {
-		let instance = new IllegalArgumentError();
-		assert.ok(instance.name === "IllegalArgumentError");
+	it("default name === 'IllegalParameterError'", () => {
+		let instance = new IllegalParameterError();
+		assert.ok(instance.name === "IllegalParameterError");
 	});
 });

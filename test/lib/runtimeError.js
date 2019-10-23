@@ -15,20 +15,20 @@
  */
 const assert = require("assert");
 const Throwable = require("ganiyem-util-throwable");
-const {Error, UnknownError} = require("../../../");
+const {Error, RuntimeError} = require("../../");
 
-describe("UnknownError", () => {
+describe("RuntimeError", () => {
 	/**
 	 */
 	it("instanceof Error", () => {
-		let instance = new UnknownError();
+		let instance = new RuntimeError();
 		assert.ok(instance instanceof Error);
 	});
 	
 	/**
 	 */
-	it("default name === 'UnknownError'", () => {
-		let instance = new UnknownError();
-		assert.ok(instance.name === "UnknownError");
+	it("default name === 'RuntimeError'", () => {
+		let instance = new RuntimeError();
+		assert.ok(instance.name === "RuntimeError");
 	});
 });

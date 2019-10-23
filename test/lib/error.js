@@ -15,27 +15,20 @@
  */
 const assert = require("assert");
 const Throwable = require("ganiyem-util-throwable");
-const {Error, RuntimeError, OutOfRangeError} = require("../../../");
+const {Error} = require("../../");
 
-describe("OutOfRangeError", () => {
+describe("Error", () => {
 	/**
 	 */
-	it("instanceof Error", () => {
-		let instance = new OutOfRangeError();
-		assert.ok(instance instanceof Error);
-	});
-
-	/**
-	 */
-	it("instanceof RuntimeError", () => {
-		let instance = new OutOfRangeError();
-		assert.ok(instance instanceof RuntimeError);
+	it("instanceof Throwable", () => {
+		let instance = new Error();
+		assert.ok(instance instanceof Throwable);
 	});
 	
 	/**
 	 */
-	it("default name === 'OutOfRangeError'", () => {
-		let instance = new OutOfRangeError();
-		assert.ok(instance.name === "OutOfRangeError");
+	it("default name === 'Error'", () => {
+		let instance = new Error();
+		assert.ok(instance.name === "Error");
 	});
 });
