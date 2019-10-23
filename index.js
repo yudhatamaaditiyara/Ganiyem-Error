@@ -18,11 +18,12 @@
 /**
  * @+
  */
-module.exports = {};
-module.exports.Error = require("./error");
-module.exports.UnknownError = require("./unknownError");
-module.exports.RuntimeError = require("./runtimeError");
-module.exports.IllegalArgumentError = require("./illegalArgumentError");
-module.exports.IllegalParameterError = require("./illegalParameterError");
-module.exports.OutOfRangeError = require("./outOfRangeError");
-module.exports.OutOfBoundsError = require("./outOfBoundsError");
+module.exports = {
+	Error: require("./lib/error"),
+	UnknownError: require("./lib/unknownError"),
+	RuntimeError: require("./lib/runtimeError"),
+	IllegalArgumentError: require("./lib/illegalArgumentError"),
+	IllegalParameterError: require("./lib/illegalParameterError"),
+	OutOfRangeError: require("./lib/outOfRangeError"),
+	OutOfBoundsError: require("./lib/outOfBoundsError")
+};
