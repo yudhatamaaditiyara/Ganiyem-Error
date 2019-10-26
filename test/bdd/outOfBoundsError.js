@@ -13,73 +13,73 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-const assert = require("assert");
-const Throwable = require("ganiyem-util-throwable");
-const {Error, RuntimeError, OutOfBoundsError} = require("../../");
+const assert = require('assert');
+const Throwable = require('ganiyem-util-throwable');
+const {Error, RuntimeError, OutOfBoundsError} = require('../../');
 
 /**
  */
-describe("outOfBoundsError", () => {
+describe('outOfBoundsError', () => {
 	/**
 	 */
-	it("instance of Error", () => {
+	it('instance of Error', () => {
 		let error = new OutOfBoundsError();
 		assert.ok(error instanceof Error);
 	});
 
 	/**
 	 */
-	it("instance of Throwable", () => {
+	it('instance of Throwable', () => {
 		let error = new OutOfBoundsError();
 		assert.ok(error instanceof Throwable);
 	});
 
 	/**
 	 */
-	it("instance of RuntimeError", () => {
+	it('instance of RuntimeError', () => {
 		let error = new OutOfBoundsError();
 		assert.ok(error instanceof RuntimeError);
 	});
 	
 	/**
 	 */
-	it("new OutOfBoundsError().name === 'OutOfBoundsError'", () => {
+	it('new OutOfBoundsError().name === "OutOfBoundsError"', () => {
 		let error = new OutOfBoundsError();
-		assert.strictEqual(error.name, "OutOfBoundsError");
+		assert.strictEqual(error.name, 'OutOfBoundsError');
 	});
 
 	/**
 	 */
-	it("new OutOfBoundsError().message === ''", () => {
+	it('new OutOfBoundsError().message === ""', () => {
 		let error = new OutOfBoundsError();
-		assert.strictEqual(error.message, "");
+		assert.strictEqual(error.message, '');
 	});
 
 	/**
 	 */
-	it("new OutOfBoundsError(null).message === 'null'", () => {
+	it('new OutOfBoundsError(null).message === "null"', () => {
 		let error = new OutOfBoundsError(null);
-		assert.strictEqual(error.message, "null");
+		assert.strictEqual(error.message, 'null');
 	});
 
 	/**
 	 */
-	it("new OutOfBoundsError(undefined).message === ''", () => {
+	it('new OutOfBoundsError(undefined).message === ""', () => {
 		let error = new OutOfBoundsError(undefined);
-		assert.strictEqual(error.message, "");
+		assert.strictEqual(error.message, '');
 	});
 
 	/**
 	 */
-	it("new OutOfBoundsError(123).message === '123'", () => {
+	it('new OutOfBoundsError(123).message === "123"', () => {
 		let error = new OutOfBoundsError(123);
-		assert.strictEqual(error.message, "123");
+		assert.strictEqual(error.message, '123');
 	});
 
 	/**
 	 */
-	it("new OutOfBoundsError('Foo').message === 'Foo'", () => {
-		let error = new OutOfBoundsError("Foo");
-		assert.strictEqual(error.message, "Foo");
+	it('new OutOfBoundsError("foo").message === "foo"', () => {
+		let error = new OutOfBoundsError('foo');
+		assert.strictEqual(error.message, 'foo');
 	});
 });

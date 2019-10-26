@@ -13,66 +13,66 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-const assert = require("assert");
-const Throwable = require("ganiyem-util-throwable");
-const {Error} = require("../../");
+const assert = require('assert');
+const Throwable = require('ganiyem-util-throwable');
+const {Error} = require('../../');
 
 /**
  */
-describe("error", () => {
+describe('error', () => {
 	/**
 	 */
-	it("instance of Error", () => {
+	it('instance of Error', () => {
 		let error = new Error();
 		assert.ok(error instanceof global.Error);
 	});
 
 	/**
 	 */
-	it("instance of Throwable", () => {
+	it('instance of Throwable', () => {
 		let error = new Error();
 		assert.ok(error instanceof Throwable);
 	});
 	
 	/**
 	 */
-	it("new Error().name === 'Error'", () => {
+	it('new Error().name === "Error"', () => {
 		let error = new Error();
-		assert.strictEqual(error.name, "Error");
+		assert.strictEqual(error.name, 'Error');
 	});
 
 	/**
 	 */
-	it("new Error().message === ''", () => {
+	it('new Error().message === ""', () => {
 		let error = new Error();
-		assert.strictEqual(error.message, "");
+		assert.strictEqual(error.message, '');
 	});
 
 	/**
 	 */
-	it("new Error(null).message === 'null'", () => {
+	it('new Error(null).message === "null"', () => {
 		let error = new Error(null);
-		assert.strictEqual(error.message, "null");
+		assert.strictEqual(error.message, 'null');
 	});
 
 	/**
 	 */
-	it("new Error(undefined).message === ''", () => {
+	it('new Error(undefined).message === ""', () => {
 		let error = new Error(undefined);
-		assert.strictEqual(error.message, "");
+		assert.strictEqual(error.message, '');
 	});
 
 	/**
 	 */
-	it("new Error(123).message === '123'", () => {
+	it('new Error(123).message === "123"', () => {
 		let error = new Error(123);
-		assert.strictEqual(error.message, "123");
+		assert.strictEqual(error.message, '123');
 	});
 
 	/**
 	 */
-	it("new Error('Foo').message === 'Foo'", () => {
-		let error = new Error("Foo");
-		assert.strictEqual(error.message, "Foo");
+	it('new Error("foo").message === "foo"', () => {
+		let error = new Error('foo');
+		assert.strictEqual(error.message, 'foo');
 	});
 });

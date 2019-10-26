@@ -13,66 +13,66 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-const assert = require("assert");
-const Throwable = require("ganiyem-util-throwable");
-const {Error, RuntimeError} = require("../../");
+const assert = require('assert');
+const Throwable = require('ganiyem-util-throwable');
+const {Error, RuntimeError} = require('../../');
 
 /**
  */
-describe("runtimeError", () => {
+describe('runtimeError', () => {
 	/**
 	 */
-	it("instance of Error", () => {
+	it('instance of Error', () => {
 		let error = new RuntimeError();
 		assert.ok(error instanceof Error);
 	});
 
 	/**
 	 */
-	it("instance of Throwable", () => {
+	it('instance of Throwable', () => {
 		let error = new RuntimeError();
 		assert.ok(error instanceof Throwable);
 	});
 	
 	/**
 	 */
-	it("new RuntimeError().name === 'RuntimeError'", () => {
+	it('new RuntimeError().name === "RuntimeError"', () => {
 		let error = new RuntimeError();
-		assert.strictEqual(error.name, "RuntimeError");
+		assert.strictEqual(error.name, 'RuntimeError');
 	});
 
 	/**
 	 */
-	it("new RuntimeError().message === ''", () => {
+	it('new RuntimeError().message === ""', () => {
 		let error = new RuntimeError();
-		assert.strictEqual(error.message, "");
+		assert.strictEqual(error.message, '');
 	});
 
 	/**
 	 */
-	it("new RuntimeError(null).message === 'null'", () => {
+	it('new RuntimeError(null).message === "null"', () => {
 		let error = new RuntimeError(null);
-		assert.strictEqual(error.message, "null");
+		assert.strictEqual(error.message, 'null');
 	});
 
 	/**
 	 */
-	it("new RuntimeError(undefined).message === ''", () => {
+	it('new RuntimeError(undefined).message === ""', () => {
 		let error = new RuntimeError(undefined);
-		assert.strictEqual(error.message, "");
+		assert.strictEqual(error.message, '');
 	});
 
 	/**
 	 */
-	it("new RuntimeError(123).message === '123'", () => {
+	it('new RuntimeError(123).message === "123"', () => {
 		let error = new RuntimeError(123);
-		assert.strictEqual(error.message, "123");
+		assert.strictEqual(error.message, '123');
 	});
 
 	/**
 	 */
-	it("new RuntimeError('Foo').message === 'Foo'", () => {
-		let error = new RuntimeError("Foo");
-		assert.strictEqual(error.message, "Foo");
+	it('new RuntimeError("foo").message === "foo"', () => {
+		let error = new RuntimeError('foo');
+		assert.strictEqual(error.message, 'foo');
 	});
 });

@@ -13,73 +13,73 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-const assert = require("assert");
-const Throwable = require("ganiyem-util-throwable");
-const {Error, RuntimeError, IllegalParameterError} = require("../../");
+const assert = require('assert');
+const Throwable = require('ganiyem-util-throwable');
+const {Error, RuntimeError, IllegalParameterError} = require('../../');
 
 /**
  */
-describe("illegalParameterError", () => {
+describe('illegalParameterError', () => {
 	/**
 	 */
-	it("instance of Error", () => {
+	it('instance of Error', () => {
 		let error = new IllegalParameterError();
 		assert.ok(error instanceof Error);
 	});
 
 	/**
 	 */
-	it("instance of Throwable", () => {
+	it('instance of Throwable', () => {
 		let error = new IllegalParameterError();
 		assert.ok(error instanceof Throwable);
 	});
 
 	/**
 	 */
-	it("instance of RuntimeError", () => {
+	it('instance of RuntimeError', () => {
 		let error = new IllegalParameterError();
 		assert.ok(error instanceof RuntimeError);
 	});
 	
 	/**
 	 */
-	it("new IllegalParameterError().name === 'IllegalParameterError'", () => {
+	it('new IllegalParameterError().name === "IllegalParameterError"', () => {
 		let error = new IllegalParameterError();
-		assert.strictEqual(error.name, "IllegalParameterError");
+		assert.strictEqual(error.name, 'IllegalParameterError');
 	});
 
 	/**
 	 */
-	it("new IllegalParameterError().message === ''", () => {
+	it('new IllegalParameterError().message === ""', () => {
 		let error = new IllegalParameterError();
-		assert.strictEqual(error.message, "");
+		assert.strictEqual(error.message, '');
 	});
 
 	/**
 	 */
-	it("new IllegalParameterError(null).message === 'null'", () => {
+	it('new IllegalParameterError(null).message === "null"', () => {
 		let error = new IllegalParameterError(null);
-		assert.strictEqual(error.message, "null");
+		assert.strictEqual(error.message, 'null');
 	});
 
 	/**
 	 */
-	it("new IllegalParameterError(undefined).message === ''", () => {
+	it('new IllegalParameterError(undefined).message === ""', () => {
 		let error = new IllegalParameterError(undefined);
-		assert.strictEqual(error.message, "");
+		assert.strictEqual(error.message, '');
 	});
 
 	/**
 	 */
-	it("new IllegalParameterError(123).message === '123'", () => {
+	it('new IllegalParameterError(123).message === "123"', () => {
 		let error = new IllegalParameterError(123);
-		assert.strictEqual(error.message, "123");
+		assert.strictEqual(error.message, '123');
 	});
 
 	/**
 	 */
-	it("new IllegalParameterError('Foo').message === 'Foo'", () => {
-		let error = new IllegalParameterError("Foo");
-		assert.strictEqual(error.message, "Foo");
+	it('new IllegalParameterError("foo").message === "foo"', () => {
+		let error = new IllegalParameterError('foo');
+		assert.strictEqual(error.message, 'foo');
 	});
 });

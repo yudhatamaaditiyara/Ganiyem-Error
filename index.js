@@ -19,11 +19,11 @@
  * @+
  */
 module.exports = {
-	Error: require("./lib/error"),
-	UnknownError: require("./lib/unknownError"),
-	RuntimeError: require("./lib/runtimeError"),
-	IllegalArgumentError: require("./lib/illegalArgumentError"),
-	IllegalParameterError: require("./lib/illegalParameterError"),
-	OutOfRangeError: require("./lib/outOfRangeError"),
-	OutOfBoundsError: require("./lib/outOfBoundsError")
+	Error: require('./lib/error'),
+	UnknownError: require('./lib/unknownError'),
+	RuntimeError: require('./lib/runtimeError'),
+	IllegalArgumentError: require('./lib/illegalArgumentError'),
+	IllegalParameterError: require('./lib/illegalParameterError'),
+	OutOfRangeError: require('./lib/outOfRangeError'),
+	OutOfBoundsError: require('./lib/outOfBoundsError')
 };

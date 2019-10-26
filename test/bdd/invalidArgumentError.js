@@ -13,73 +13,73 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-const assert = require("assert");
-const Throwable = require("ganiyem-util-throwable");
-const {Error, RuntimeError, IllegalArgumentError} = require("../../");
+const assert = require('assert');
+const Throwable = require('ganiyem-util-throwable');
+const {Error, RuntimeError, IllegalArgumentError} = require('../../');
 
 /**
  */
-describe("illegalArgumentError", () => {
+describe('illegalArgumentError', () => {
 	/**
 	 */
-	it("instance of Error", () => {
+	it('instance of Error', () => {
 		let error = new IllegalArgumentError();
 		assert.ok(error instanceof Error);
 	});
 
 	/**
 	 */
-	it("instance of Throwable", () => {
+	it('instance of Throwable', () => {
 		let error = new IllegalArgumentError();
 		assert.ok(error instanceof Throwable);
 	});
 
 	/**
 	 */
-	it("instance of RuntimeError", () => {
+	it('instance of RuntimeError', () => {
 		let error = new IllegalArgumentError();
 		assert.ok(error instanceof RuntimeError);
 	});
 	
 	/**
 	 */
-	it("new IllegalArgumentError().name === 'IllegalArgumentError'", () => {
+	it('new IllegalArgumentError().name === "IllegalArgumentError"', () => {
 		let error = new IllegalArgumentError();
-		assert.strictEqual(error.name, "IllegalArgumentError");
+		assert.strictEqual(error.name, 'IllegalArgumentError');
 	});
 
 	/**
 	 */
-	it("new IllegalArgumentError().message === ''", () => {
+	it('new IllegalArgumentError().message === ""', () => {
 		let error = new IllegalArgumentError();
-		assert.strictEqual(error.message, "");
+		assert.strictEqual(error.message, '');
 	});
 
 	/**
 	 */
-	it("new IllegalArgumentError(null).message === 'null'", () => {
+	it('new IllegalArgumentError(null).message === "null"', () => {
 		let error = new IllegalArgumentError(null);
-		assert.strictEqual(error.message, "null");
+		assert.strictEqual(error.message, 'null');
 	});
 
 	/**
 	 */
-	it("new IllegalArgumentError(undefined).message === ''", () => {
+	it('new IllegalArgumentError(undefined).message === ""', () => {
 		let error = new IllegalArgumentError(undefined);
-		assert.strictEqual(error.message, "");
+		assert.strictEqual(error.message, '');
 	});
 
 	/**
 	 */
-	it("new IllegalArgumentError(123).message === '123'", () => {
+	it('new IllegalArgumentError(123).message === "123"', () => {
 		let error = new IllegalArgumentError(123);
-		assert.strictEqual(error.message, "123");
+		assert.strictEqual(error.message, '123');
 	});
 
 	/**
 	 */
-	it("new IllegalArgumentError('Foo').message === 'Foo'", () => {
-		let error = new IllegalArgumentError("Foo");
-		assert.strictEqual(error.message, "Foo");
+	it('new IllegalArgumentError("foo").message === "foo"', () => {
+		let error = new IllegalArgumentError('foo');
+		assert.strictEqual(error.message, 'foo');
 	});
 });

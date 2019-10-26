@@ -13,73 +13,73 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-const assert = require("assert");
-const Throwable = require("ganiyem-util-throwable");
-const {Error, RuntimeError, OutOfRangeError} = require("../../");
+const assert = require('assert');
+const Throwable = require('ganiyem-util-throwable');
+const {Error, RuntimeError, OutOfRangeError} = require('../../');
 
 /**
  */
-describe("outOfRangeError", () => {
+describe('outOfRangeError', () => {
 	/**
 	 */
-	it("instance of Error", () => {
+	it('instance of Error', () => {
 		let error = new OutOfRangeError();
 		assert.ok(error instanceof Error);
 	});
 
 	/**
 	 */
-	it("instance of Throwable", () => {
+	it('instance of Throwable', () => {
 		let error = new OutOfRangeError();
 		assert.ok(error instanceof Throwable);
 	});
 
 	/**
 	 */
-	it("instance of RuntimeError", () => {
+	it('instance of RuntimeError', () => {
 		let error = new OutOfRangeError();
 		assert.ok(error instanceof RuntimeError);
 	});
 	
 	/**
 	 */
-	it("new OutOfRangeError().name === 'OutOfRangeError'", () => {
+	it('new OutOfRangeError().name === "OutOfRangeError"', () => {
 		let error = new OutOfRangeError();
-		assert.strictEqual(error.name, "OutOfRangeError");
+		assert.strictEqual(error.name, 'OutOfRangeError');
 	});
 
 	/**
 	 */
-	it("new OutOfRangeError().message === ''", () => {
+	it('new OutOfRangeError().message === ""', () => {
 		let error = new OutOfRangeError();
-		assert.strictEqual(error.message, "");
+		assert.strictEqual(error.message, '');
 	});
 
 	/**
 	 */
-	it("new OutOfRangeError(null).message === 'null'", () => {
+	it('new OutOfRangeError(null).message === "null"', () => {
 		let error = new OutOfRangeError(null);
-		assert.strictEqual(error.message, "null");
+		assert.strictEqual(error.message, 'null');
 	});
 
 	/**
 	 */
-	it("new OutOfRangeError(undefined).message === ''", () => {
+	it('new OutOfRangeError(undefined).message === ""', () => {
 		let error = new OutOfRangeError(undefined);
-		assert.strictEqual(error.message, "");
+		assert.strictEqual(error.message, '');
 	});
 
 	/**
 	 */
-	it("new OutOfRangeError(123).message === '123'", () => {
+	it('new OutOfRangeError(123).message === "123"', () => {
 		let error = new OutOfRangeError(123);
-		assert.strictEqual(error.message, "123");
+		assert.strictEqual(error.message, '123');
 	});
 
 	/**
 	 */
-	it("new OutOfRangeError('Foo').message === 'Foo'", () => {
-		let error = new OutOfRangeError("Foo");
-		assert.strictEqual(error.message, "Foo");
+	it('new OutOfRangeError("foo").message === "foo"', () => {
+		let error = new OutOfRangeError('foo');
+		assert.strictEqual(error.message, 'foo');
 	});
 });
