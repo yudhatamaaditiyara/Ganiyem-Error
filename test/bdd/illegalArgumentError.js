@@ -17,7 +17,7 @@ const assert = require('assert');
 const Throwable = require('ganiyem-util-throwable');
 const {Error, RuntimeError, IllegalArgumentError} = require('../../');
 
-describe('illegalArgumentError', () => {
+describe('IllegalArgumentError', () => {
   it('instance of Error', () => {
     let error = new IllegalArgumentError();
     assert.ok(error instanceof Error);
