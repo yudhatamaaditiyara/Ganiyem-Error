@@ -17,62 +17,44 @@ const assert = require('assert');
 const Throwable = require('ganiyem-util-throwable');
 const {Error, UnknownError} = require('../../');
 
-/**
- */
-describe('unknownError', () => {
-	/**
-	 */
-	it('instance of Error', () => {
-		let error = new UnknownError();
-		assert.ok(error instanceof Error);
-	});
+describe('UnknownError', () => {
+  it('must be instanceof Error', () => {
+    let error = new UnknownError();
+    assert.ok(error instanceof Error);
+  });
 
-	/**
-	 */
-	it('instance of Throwable', () => {
-		let error = new UnknownError();
-		assert.ok(error instanceof Throwable);
-	});
-	
-	/**
-	 */
-	it('new UnknownError().name === "UnknownError"', () => {
-		let error = new UnknownError();
-		assert.strictEqual(error.name, 'UnknownError');
-	});
+  it('must be instance of Throwable', () => {
+    let error = new UnknownError();
+    assert.ok(error instanceof Throwable);
+  });
 
-	/**
-	 */
-	it('new UnknownError().message === ""', () => {
-		let error = new UnknownError();
-		assert.strictEqual(error.message, '');
-	});
+  it('must be new UnknownError().name === "UnknownError"', () => {
+    let error = new UnknownError();
+    assert.strictEqual(error.name, 'UnknownError');
+  });
 
-	/**
-	 */
-	it('new UnknownError(null).message === "null"', () => {
-		let error = new UnknownError(null);
-		assert.strictEqual(error.message, 'null');
-	});
+  it('must be new UnknownError().message === ""', () => {
+    let error = new UnknownError();
+    assert.strictEqual(error.message, '');
+  });
 
-	/**
-	 */
-	it('new UnknownError(undefined).message === ""', () => {
-		let error = new UnknownError(undefined);
-		assert.strictEqual(error.message, '');
-	});
+  it('must be new UnknownError(null).message === "null"', () => {
+    let error = new UnknownError(null);
+    assert.strictEqual(error.message, 'null');
+  });
 
-	/**
-	 */
-	it('new UnknownError(123).message === "123"', () => {
-		let error = new UnknownError(123);
-		assert.strictEqual(error.message, '123');
-	});
+  it('must be new UnknownError(undefined).message === ""', () => {
+    let error = new UnknownError(undefined);
+    assert.strictEqual(error.message, '');
+  });
 
-	/**
-	 */
-	it('new UnknownError("foo").message === "foo"', () => {
-		let error = new UnknownError('foo');
-		assert.strictEqual(error.message, 'foo');
-	});
+  it('must be new UnknownError(123).message === "123"', () => {
+    let error = new UnknownError(123);
+    assert.strictEqual(error.message, '123');
+  });
+
+  it('must be new UnknownError("foo").message === "foo"', () => {
+    let error = new UnknownError('foo');
+    assert.strictEqual(error.message, 'foo');
+  });
 });

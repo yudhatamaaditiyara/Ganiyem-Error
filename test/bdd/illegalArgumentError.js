@@ -15,46 +15,51 @@
  */
 const assert = require('assert');
 const Throwable = require('ganiyem-util-throwable');
-const {Error, RuntimeError} = require('../../');
+const {Error, RuntimeError, IllegalArgumentError} = require('../../');
 
-describe('RuntimeError', () => {
+describe('illegalArgumentError', () => {
   it('instance of Error', () => {
-    let error = new RuntimeError();
+    let error = new IllegalArgumentError();
     assert.ok(error instanceof Error);
   });
 
   it('instance of Throwable', () => {
-    let error = new RuntimeError();
+    let error = new IllegalArgumentError();
     assert.ok(error instanceof Throwable);
   });
 
-  it('new RuntimeError().name === "RuntimeError"', () => {
-    let error = new RuntimeError();
-    assert.strictEqual(error.name, 'RuntimeError');
+  it('instance of RuntimeError', () => {
+    let error = new IllegalArgumentError();
+    assert.ok(error instanceof RuntimeError);
   });
 
-  it('new RuntimeError().message === ""', () => {
-    let error = new RuntimeError();
+  it('new IllegalArgumentError().name === "IllegalArgumentError"', () => {
+    let error = new IllegalArgumentError();
+    assert.strictEqual(error.name, 'IllegalArgumentError');
+  });
+
+  it('new IllegalArgumentError().message === ""', () => {
+    let error = new IllegalArgumentError();
     assert.strictEqual(error.message, '');
   });
 
-  it('new RuntimeError(null).message === "null"', () => {
-    let error = new RuntimeError(null);
+  it('new IllegalArgumentError(null).message === "null"', () => {
+    let error = new IllegalArgumentError(null);
     assert.strictEqual(error.message, 'null');
   });
 
-  it('new RuntimeError(undefined).message === ""', () => {
-    let error = new RuntimeError(undefined);
+  it('new IllegalArgumentError(undefined).message === ""', () => {
+    let error = new IllegalArgumentError(undefined);
     assert.strictEqual(error.message, '');
   });
 
-  it('new RuntimeError(123).message === "123"', () => {
-    let error = new RuntimeError(123);
+  it('new IllegalArgumentError(123).message === "123"', () => {
+    let error = new IllegalArgumentError(123);
     assert.strictEqual(error.message, '123');
   });
 
-  it('new RuntimeError("foo").message === "foo"', () => {
-    let error = new RuntimeError('foo');
+  it('new IllegalArgumentError("foo").message === "foo"', () => {
+    let error = new IllegalArgumentError('foo');
     assert.strictEqual(error.message, 'foo');
   });
 });
