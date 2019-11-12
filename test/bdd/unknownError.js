@@ -23,7 +23,7 @@ describe('UnknownError', () => {
     assert.ok(error instanceof Error);
   });
 
-  it('must be instance of Throwable', () => {
+  it('must be instanceof Throwable', () => {
     let error = new UnknownError();
     assert.ok(error instanceof Throwable);
   });
