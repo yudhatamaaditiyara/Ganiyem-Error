@@ -1,3 +1,9 @@
+# 1.5.1 - 2019-11-14
+
+**Changed**
+- Deps `ganiyem-util-throwable 1.1.7`
+- Test refactoring
+
 # 1.5.0 - 2019-11-12
 
 **Added**
