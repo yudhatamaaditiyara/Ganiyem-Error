@@ -1,3 +1,8 @@
+# 1.5.2 - 2019-11-22
+
+- build: upgrade deps `ganiyem-util-throwable@1.1.9`
+- docs: refactoring `CHANGELOG.md`
+
 # 1.5.1 - 2019-11-14
 
 - build: upgrade deps `ganiyem-util-throwable@1.1.7`
