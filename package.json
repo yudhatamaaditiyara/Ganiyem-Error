@@ -8,7 +8,7 @@
     "url": "git+https://github.com/yudhatamaaditiyara/Ganiyem-Error.git"
   },
   "dependencies": {
-    "ganiyem-util-throwable": "^1.1.8"
+    "ganiyem-util-throwable": "^1.1.9"
   },
   "devDependencies": {
     "coveralls": "^3.0.7",
